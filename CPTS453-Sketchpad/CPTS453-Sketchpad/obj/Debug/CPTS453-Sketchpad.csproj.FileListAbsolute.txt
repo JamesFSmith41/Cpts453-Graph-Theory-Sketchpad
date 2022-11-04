@@ -1,0 +1,11 @@
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.exe.config
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.exe
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.pdb
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.SuggestedBindingRedirects.cache
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453_Sketchpad.Form1.resources
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453_Sketchpad.Properties.Resources.resources
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.GenerateResource.cache
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.exe
+C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.pdb
