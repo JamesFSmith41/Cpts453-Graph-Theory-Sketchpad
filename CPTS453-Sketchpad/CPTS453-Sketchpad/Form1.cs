@@ -18,6 +18,9 @@ namespace CPTS453_Sketchpad
         int counter;
         Timer timer;
         int verts;
+        int edges;
+        Dictionary<int, List<int>> vertEdgePairs;
+        Color color;
 
         public Form1()
         {
@@ -30,12 +33,20 @@ namespace CPTS453_Sketchpad
             addVertex = false;
             delete = false;
             addEdge = false;
+            vertEdgePairs = new Dictionary<int, List<int>>();
+            color = Color.Black;
+            /*dataGridView1.Rows.Add();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows[0].Cells[0].Value = "Test";
+            dataGridView1.Rows[1].Cells[1].Value = 12;*/
+            //dataGridView1.Rows.Add(row);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             currentActionTxt.Text = "none";
             numOfVerts.Text = verts.ToString();
+            drawingSurface1.vertEdgePairChanged += this.updateVertexEdgePair;
         }
 
         private void timer1_Tick(object sender, System.EventArgs e)
@@ -127,13 +138,32 @@ namespace CPTS453_Sketchpad
                     deleteBtn.BackColor = Color.Transparent;
                     drawingSurface1.clearTempShapes();
                     break;
+                case 4:
+
+                    addEdge = false;
+                    drawingSurface1.createEdge = false;
+                    currentActionTxt.Text = "Change Color";
+
+                    addEdgeBtn.BackColor = Color.Transparent;
+                    addVertex = false;
+                    addVertexBtn.BackColor = Color.Transparent;
+
+                    delete = false;
+                    drawingSurface1.delete = false;
+                    deleteBtn.BackColor = Color.Transparent;
+
+                    colorBtn.BackColor = Color.Gray;
+
+                    drawingSurface1.clearTempShapes();
+                    break;
+
 
 
             }
         }
         private void drawingAddVertex()
         {
-            drawingSurface1.AddShape(clickX, clickY);
+            drawingSurface1.AddShape(clickX, clickY, color);
         }
 
         private void clearDrawingBtn_Click(object sender, EventArgs e)
@@ -146,6 +176,7 @@ namespace CPTS453_Sketchpad
             buttonSwitch(3);
         }
 
+
         private void deleteVertexBtn_Click(object sender, EventArgs e)
         {
             if (!delete)
@@ -155,12 +186,23 @@ namespace CPTS453_Sketchpad
             }
             else
             {
-                delete = false;
+                delete = false; 
                 currentActionTxt.Text = "None";
                 deleteBtn.BackColor = Color.Transparent;
                 drawingSurface1.createEdge=false;
                 drawingSurface1.delete = false;
             }
+
+        }
+
+        private void colorBtn_Click(object sender, EventArgs e)
+        {
+            if(colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                color = colorDialog1.Color;
+                drawingSurface1.updateColor(color);
+            }
+           
 
         }
 
@@ -178,6 +220,24 @@ namespace CPTS453_Sketchpad
                 addEdgeBtn.BackColor = Color.Transparent;
                 drawingSurface1.createEdge = false;
                 drawingSurface1.clearTempShapes();
+            }
+        }
+
+        private void updateVertexEdgePair(object sender, EventArgs e)
+        {
+            //vertEdgePairs = new Dictionary<int, List<int>>();
+            vertEdgePairs = drawingSurface1.getVertEdgePairs();
+            dataGridView1.Rows.Clear();
+
+            foreach (int vertex in vertEdgePairs.Keys)
+            {
+                String edgeStr = "";
+                foreach (int edge in vertEdgePairs[vertex])
+                {
+                    edgeStr += edge.ToString();
+                    edgeStr += " ";
+                }
+                dataGridView1.Rows.Add(vertex, edgeStr);
             }
         }
     }

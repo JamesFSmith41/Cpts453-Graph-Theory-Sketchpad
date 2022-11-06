@@ -15,7 +15,11 @@ namespace CPTS453_Sketchpad
         public int curX { get; set; }
         public int curY { get; set; }
 
-        public Vertex(int x, int y, Color color) { 
+        public Color tempColor { get; set; }  
+        
+        public int number { get; set; }
+
+        public Vertex(int x, int y, Color color, int num) { 
             FillColor = color;
             Radious = 25;
             Center = new Point(x, y);
@@ -23,6 +27,8 @@ namespace CPTS453_Sketchpad
             hasEdges = false;
             curX = x;
             curY = y;
+            number = num;
+            tempColor = color;
         }
         public Color FillColor { get; set; }
         public Point Center { get; set; }
@@ -47,9 +53,14 @@ namespace CPTS453_Sketchpad
         }
         public void Draw(Graphics g)
         {
+            Font font1 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
             using (var path = GetPath())
             using (var brush = new SolidBrush(FillColor))
+            {
                 g.FillPath(brush, path);
+                g.DrawString(number.ToString(), font1, Brushes.White, Center);
+            }
+                
         }
         public void addEdge(Edge edge)
         {
@@ -65,6 +76,11 @@ namespace CPTS453_Sketchpad
         public void Move(float xStart, float yStart, float xEnd, float yEnd)
         {
 
+        }
+
+        public void restColor()
+        {
+            this.FillColor = tempColor;
         }
     }
 }

@@ -15,7 +15,6 @@ namespace CPTS453_Sketchpad
         bool HitTest(Point p);
         void Draw(Graphics g);
         void Move(Point d);
-
         void Move(float xStart, float yStart, float xEnd, float yEnd);
     }
 }
