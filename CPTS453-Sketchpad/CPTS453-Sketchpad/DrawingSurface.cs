@@ -244,7 +244,6 @@ namespace CPTS453_Sketchpad
                             List<Edge> tempEdge = vertexMap[selectedShape];
                             foreach (Edge edge in tempEdge)
                             {
-                                edge.restPoints();
                                 if (edgeMap[edge][0] == selectedShape)
                                 {
                                     edge.xStart = e.Location.X;
@@ -255,6 +254,7 @@ namespace CPTS453_Sketchpad
                                     edge.xEnd = e.Location.X;
                                     edge.yEnd = e.Location.Y;
                                 }
+                                edge.restPoints();
                             }
                         }
                     }

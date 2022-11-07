@@ -9,3 +9,14 @@ C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS45
 C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.CoreCompileInputs.cache
 C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.exe
 C:\Users\james\source\repos\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.pdb
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.exe.config
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.exe
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\bin\Debug\CPTS453-Sketchpad.pdb
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.AssemblyReference.cache
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.SuggestedBindingRedirects.cache
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453_Sketchpad.Form1.resources
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453_Sketchpad.Properties.Resources.resources
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.GenerateResource.cache
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.csproj.CoreCompileInputs.cache
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.exe
+D:\WSU\Fall2022\Cpts453\Cpts453-Graph-Theory-Sketchpad\CPTS453-Sketchpad\CPTS453-Sketchpad\obj\Debug\CPTS453-Sketchpad.pdb

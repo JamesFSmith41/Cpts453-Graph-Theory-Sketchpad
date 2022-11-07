@@ -24,8 +24,8 @@ namespace CPTS453_Sketchpad
             this.yEnd = yEnd;
             this.number = num;
             this.tempColor = Color.Black;
-            Point startPoint = new Point((int)xStart, (int)yStart);
-            Point endPoint = new Point((int)xEnd, (int)yEnd);
+            startPoint = new Point((int)xStart, (int)yStart);
+            endPoint = new Point((int)xEnd, (int)yEnd);
             curvePoints = new Point[] { startPoint, endPoint };
         }
 
@@ -49,10 +49,11 @@ namespace CPTS453_Sketchpad
         }
         public void Draw(Graphics g)
         {
-            
+            int xMid = (int)(xEnd -xStart)/2;
+            int yMid = (int)(yEnd -yStart)/2;
             Pen pen = new Pen(Color.Black, 4);
-         //   Point midPoint = new Point((int)(xEnd - xStart), (int)(yEnd - yStart) + 10);
-            curvePoints = new Point[] { startPoint, midPoint, endPoint };
+            Point midPoint = new Point((int)(xMid + xStart), (int)(yMid + yStart));
+            curvePoints = new Point[] {startPoint, midPoint, endPoint };
 
             using (var path = GetPath())
 
@@ -110,8 +111,8 @@ namespace CPTS453_Sketchpad
 
         public void restPoints()
         {
-            Point startPoint = new Point((int)xStart, (int)yStart);
-            Point endPoint = new Point((int)xEnd, (int)yEnd);
+            startPoint = new Point((int)xStart, (int)yStart);
+            endPoint = new Point((int)xEnd, (int)yEnd);
             curvePoints = new Point[] { startPoint, endPoint };
         }
 
