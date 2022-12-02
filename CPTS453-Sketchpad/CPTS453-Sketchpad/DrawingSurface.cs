@@ -67,15 +67,27 @@ namespace CPTS453_Sketchpad
                                 {
                                     shape2 = selectedShape;
                                     shape2.FillColor = Color.Yellow;
-                                    Edge edge = new Edge(shape1.curX + 25, shape1.curY + 25, shape2.curX + 25, shape2.curY + 25, edgeCount);
-                                    shape1.hasEdges = true;
-                                    shape2.hasEdges = true;
-                                    Vertex[] vertices = new Vertex[2];
-                                    vertices[0] = shape1;
-                                    vertices[1] = shape2;
-                                    edgeMap.Add(edge, vertices);
-                                    vertexMap[shape1].Add(edge);
-                                    vertexMap[shape2].Add(edge);
+                                    if (shape1 == shape2)
+                                    {
+                                        Edge edge = new Edge(shape1.curX + 25, shape1.curY + 25, shape2.curX + 25, shape2.curY + 25, edgeCount, true, color);
+                                        shape1.hasEdges = true;
+                                        Vertex[] vertices = new Vertex[1];
+                                        vertices[0] = shape1;
+                                        edgeMap.Add(edge, vertices);
+                                        vertexMap[shape1].Add(edge);
+                                    }
+                                    else
+                                    {
+                                        Edge edge = new Edge(shape1.curX + 25, shape1.curY + 25, shape2.curX + 25, shape2.curY + 25, edgeCount, false, color);
+                                        shape1.hasEdges = true;
+                                        shape2.hasEdges = true;
+                                        Vertex[] vertices = new Vertex[2];
+                                        vertices[0] = shape1;
+                                        vertices[1] = shape2;
+                                        edgeMap.Add(edge, vertices);
+                                        vertexMap[shape1].Add(edge);
+                                        vertexMap[shape2].Add(edge);
+                                    }
                                     clearTempShapes();
                                     edgeCount++;
                                     OnValueChanged(t);
@@ -244,6 +256,7 @@ namespace CPTS453_Sketchpad
                             List<Edge> tempEdge = vertexMap[selectedShape];
                             foreach (Edge edge in tempEdge)
                             {
+                                edge.restPoints();
                                 if (edgeMap[edge][0] == selectedShape)
                                 {
                                     edge.xStart = e.Location.X;
@@ -254,7 +267,6 @@ namespace CPTS453_Sketchpad
                                     edge.xEnd = e.Location.X;
                                     edge.yEnd = e.Location.Y;
                                 }
-                                edge.restPoints();
                             }
                         }
                     }
